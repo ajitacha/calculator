@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title>
+		Calculator
+	</title>
+	<style>
+			body{
+				background-image: url(https://i.pinimg.com/originals/eb/a3/9e/eba39ebd3f4131e65390a922327e1323.jpg);
+			}
+			#calc{
+				margin-top: 0px;
+				background-color:aqua;
+				width: 500px;
+				height:650px;
+			}
+			div.button{
+				background-color:black;
+				width: 100px;
+				height:100px;
+				float:left;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			#plus{background-color:black;
+				width: 100px;
+				height:100px;
+				float:left;
+				margin-left: 20px;
+				margin-bottom: 20px;
+
+			}
+			button{
+				width:100px;
+				height:100px;
+				font-size: 40px;
+				size: cover;
+			}
+			#textbox{
+				width:460px
+				height:100px;
+				background-color: green;
+				float:left;
+				margin-right: 15px;
+				margin-bottom:10px;
+			}
+			p{
+				font-family:algerian;
+				font-size:40px;
+				text-align:center;
+				color:white;
+			}
+
+	</style>
+</head>
+<body>
+	<p> This calculator was designed by Ajit Acharya </p>
+	<center>
+	<div id="calc">
+		<div id="textbox">
+			<input type="text" id="tx1" name="value" style="height:100px;width:500px;font-size: 40px;">
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value ="";'>C</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="1";' >1</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="2";' >2</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="3";' >3</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="4";' >4</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="5";' >5</button>
+		</div>
+		<div class="button">
+
+			<button type="button" onclick='document.getElementById("tx1").value+="6";' >6</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="7";' >7</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="8";' >8</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="9";' >9</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+="0";' >0</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+=" + ";'>+</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+=" - ";'>-</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+=" * ";'>*</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick='document.getElementById("tx1").value+=" / ";'>/</button>
+		</div>
+		<div class="button">
+			<button type="button" onclick=" madd();" >=</button>
+		</div>
+
+	</div>
+	</center>
+	<p id='second' style="font-size: 40px;color:white;"></p>
+
+	<script>
+		function madd()
+		{
+			
+			var str = document.getElementById("tx1").value ;
+  			var res = str.split(" ");
+			if(res[1]=='+')
+			{
+  			document.getElementById("tx1").value = parseInt(res[0]) + parseInt(res[2]);
+			}
+			if(res[1]=='-')
+			{
+  			document.getElementById("tx1").value = parseInt(res[0]) - parseInt(res[2]);
+			}
+			if(res[1]=='*')
+			{
+  			document.getElementById("tx1").value = parseInt(res[0]) * parseInt(res[2]);
+			}
+			if(res[1]=='/')
+			{
+  			document.getElementById("tx1").value = parseInt(res[0]) / parseInt(res[2]);
+			}
+		}
+	</script>
+
+</body>
+</html>
