@@ -119,25 +119,9 @@
 		function madd()
 		{
 			
-			var str = document.getElementById("tx1").value ;
-  			var res = str.split(" ");
-			if(res[1]=='+')
-			{
-  			document.getElementById("tx1").value = parseInt(res[0]) + parseInt(res[2]);
-			}
-			if(res[1]=='-')
-			{
-  			document.getElementById("tx1").value = parseInt(res[0]) - parseInt(res[2]);
-			}
-			if(res[1]=='*')
-			{
-  			document.getElementById("tx1").value = parseInt(res[0]) * parseInt(res[2]);
-			}
-			if(res[1]=='/')
-			{
-  			document.getElementById("tx1").value = parseInt(res[0]) / parseInt(res[2]);
-			}
-		}
+			var str = eval(document.getElementById("tx1").value);
+                        document.getElementById("tx1").value = str;
+                 }
 	</script>
 
 </body>
